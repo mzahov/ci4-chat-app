@@ -1,0 +1,27 @@
+@import 'bootstrap/scss/bootstrap';
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    background-image:
+        linear-gradient(rgba(255, 255, 255, .07) 2px, transparent 2px), 
+        linear-gradient(90deg, rgba(255, 255, 255, .07) 2px, transparent 2px), 
+        linear-gradient(rgba(255, 255, 255, .06) 1px, transparent 1px), 
+        linear-gradient(90deg, rgba(255, 255, 255, .06) 1px, transparent 1px);
+
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+}
+
+.card {
+    background: transparent;
+    backdrop-filter: blur(5px);
+}
+
+.btn-gradient {
+    background: linear-gradient(90deg, #7C2C6F 0%, #4E3A46 100%);
+    color: #fff;
+}
