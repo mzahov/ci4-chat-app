@@ -105,8 +105,8 @@ php spark websocket:start
 ## Screenshots
 
 <p float="left">
-  <img src="https://github.com/mzahov/ci4-chat-app/blob/main/screenshots/chat-list-mobile.jpeg">
-  <img src="https://github.com/mzahov/ci4-chat-app/blob/main/screenshots/chat-open-room-mobile.jpeg">
+  <img src="https://github.com/mzahov/ci4-chat-app/blob/main/screenshots/chat-list-mobile.jpeg" width=49%>
+  <img src="https://github.com/mzahov/ci4-chat-app/blob/main/screenshots/chat-open-room-mobile.jpeg" width=49%>
 </p>
 
 <p float="left">
