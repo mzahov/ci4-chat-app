@@ -80,6 +80,13 @@ body {
         text-decoration: none;
         letter-spacing: 0.15em;
         text-transform: uppercase;
+
+        img {
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            object-fit: fill;
+        }
     }
 }
 

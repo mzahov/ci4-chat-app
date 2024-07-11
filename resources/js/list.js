@@ -26,14 +26,14 @@ export function populateRoomList() {
 
             // Render each chat room in the list
             chatRooms.forEach((value) => {
-                renderChatRoom(value.id, value.author, value.name, value.message, value.created_at, value.type);
+                renderChatRoom(value.id, value.author, value.name, value.message, value.created_at, value.avatar, value.type);
             });
         }
     });
 }
 
 // Renders a single chat room in the list
-export function renderChatRoom(roomId, author, name, message, time, type = 'message', prepend = false) {
+export function renderChatRoom(roomId, author, name, message, time, avatar, type = 'message', prepend = false) {
     const isCurrentUser = $('#username').text() === author;
     const senderName = isCurrentUser ? "You" : author;
 
@@ -53,6 +53,12 @@ export function renderChatRoom(roomId, author, name, message, time, type = 'mess
     // Set chat room data and text
     roomListContent.attr('data-id', roomId);
     roomListContent.find('.room-name').text(name);
+
+    if (avatar !== null) {
+        roomListContent.find('.avatar span').append($(`<img src="chat/show-file/${roomId}/${avatar}/avatar">`));
+    } else {
+        roomListContent.find('.avatar span').text(name.charAt(0).toUpperCase());
+    }
 
     if (message !== null) {
         if (type === 'message') {
