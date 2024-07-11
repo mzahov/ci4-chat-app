@@ -8,7 +8,7 @@ This is a real-time chat application built with Codeigniter4, jQuery, Bootstrap5
 
 - Real-time communication using WebSockets
 - Individual and group chats
-- RESTful CRUD operations for users and chats
+- RESTful CRUD operations for chats
 - User authentication and authorization
 - Responsive design with Bootstrap5
 - Efficient asset management using Vite
@@ -32,23 +32,26 @@ Follow these steps to set up the project locally:
 ## Steps
 
 1. Clone the repository
-
-```git clone https://github.com/mzahov/ci4-chat-app.git```
+```
+git clone https://github.com/mzahov/ci4-chat-app.git
+```
 
 2. Install PHP dependencies
-
-```composer install```
+```
+composer install
+```
 
 3. Install Node.js dependencies
+```
+npm install
+```
 
-```npm install```
-
-4. Set up environment variables
-
-```cp env .env```
+5. Set up environment variables
+```
+cp env .env
+```
 
 5. Edit environment variables for your app, specifically the baseURL, database settings, Vite and WebSocket Port.
-
 ```
 app.baseURL = ''
 
@@ -70,23 +73,44 @@ WS_PORT = 8080
 
 6. Set Secret Key in .env
 - Generate at least 256 bits random string
-```php -r 'echo base64_encode(random_bytes(32));'```
+```
+php -r 'echo base64_encode(random_bytes(32));'
+```
 
 - Add it in your .env file
-```authjwt.keys.default.0.secret = ''```
+```
+authjwt.keys.default.0.secret = ''
+```
 
 7. Run database migrations
-
-```php spark migrate```
+```
+php spark migrate
+```
 
 8. Start the development server
-
-```php spark serve```
+```
+php spark serve
+```
 
 9. Start the vite server
-
-```npm run dev```
+```
+npm run dev
+```
 
 10. Start the WebSocket server
+```
+php spark websocket:start
+```
 
-```php spark websocket:start```
+## Screenshots
+
+<p float="left">
+  <img src="https://github.com/mzahov/ci4-chat-app/blob/main/screenshots/chat-list-mobile.jpeg">
+  <img src="https://github.com/mzahov/ci4-chat-app/blob/main/screenshots/chat-open-room-mobile.jpeg">
+</p>
+
+<p float="left">
+  <img src="https://github.com/mzahov/ci4-chat-app/blob/main/screenshots/chat-empty.png" width=49%>
+  <img src="https://github.com/mzahov/ci4-chat-app/blob/main/screenshots/chat-open-room.png" width=49%>
+  <img src="https://github.com/mzahov/ci4-chat-app/blob/main/screenshots/chat-login.png" width=49%>
+</p>
